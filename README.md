@@ -78,5 +78,5 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
 
 ## 📍 Studio Contact
 - **Address**: Chimni Road, Ludhiana, Punjab, India
-- **WhatsApp**: [+91 97790 47374](https://wa.me/919779047374)
+- **WhatsApp**: [Click to WhatsApp](https://wa.me/YOUR_PHONE_NUMBER)
 - **Instagram**: [@nailedit.frr](https://www.instagram.com/nailedit.frr/)
