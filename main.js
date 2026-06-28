@@ -1290,9 +1290,8 @@ ${inspoText ? `- Reference details: ${inspoText}` : ''}`;
 💭 *Special Notes:* ${notes ? notes : 'None'}`;
 
       const encodedMsg = encodeURIComponent(waMessage);
-      // Link to WhatsApp (retrieved securely from environment variables)
-      const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
-      bookingSendWABtn.href = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
+      // Link to WhatsApp (919779047374 - Ludhiana Studio phone)
+      bookingSendWABtn.href = `https://wa.me/919779047374?text=${encodedMsg}`;
 
       // Show overlay modal
       bookingOverlay.classList.add('active');
