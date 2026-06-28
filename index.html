@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>NailEdit.frr | Your Aesthetic, Your Story ✨</title>
+  <meta name="description" content="Step into the magical nail universe of NailEdit.frr in Ludhiana, Punjab. Discover your nail personality with our quiz, select your aesthetic (Indian, Kawaii, Anime, Custom), and book your custom nail extensions.">
+  <meta name="keywords" content="nail extensions, nail art, Ludhiana, bridal nails, Kawaii nails, Anime nails, custom nails, gel polish, India beauty salon">
+  <meta name="author" content="NailEdit.frr">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naileditfrr.in/">
+  <meta property="og:title" content="NailEdit.frr | Magical Nail Universe & Extensions">
+  <meta property="og:description" content="Discover your nail universe. Switch between Traditional Indian, Kawaii, Anime, or Custom aesthetics instantly.">
+  <meta property="og:image" content="assets/custom_nails.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/nail_cute.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Sacramento&family=Cinzel:wght@600;800&family=Bubblegum+Sans&family=Space+Grotesk:wght@500;700&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Libraries (Lucide Icons & Canvas Confetti) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="welcome-active">
+
+  <!-- ==========================================
+       Ambient Theme Particles Container
+       ========================================== -->
+  <div class="theme-particles" id="theme-particles" aria-hidden="true"></div>
+
+  <!-- Anime Theme — Sakura Twilight Background -->
+  <div class="anime-character-bg" aria-hidden="true">
+    <div class="anime-aurora anime-aurora-1"></div>
+    <div class="anime-aurora anime-aurora-2"></div>
+    <div class="anime-aurora anime-aurora-3"></div>
+    <div class="anime-starfield"></div>
+    <div class="anime-speed-lines"></div>
+
+    <div class="anime-char char-nezuko"></div>
+    <div class="anime-char char-sailormoon"></div>
+    <div class="anime-char char-cyberpunk"></div>
+    <div class="anime-char char-pink"></div>
+
+    <div class="anime-deco moon-deco">🌙</div>
+    <div class="anime-deco sakura-float-1">🌸</div>
+    <div class="anime-deco sakura-float-2">🌸</div>
+    <div class="anime-deco sakura-float-3">✿</div>
+    <div class="anime-deco star-glow-1">★</div>
+    <div class="anime-deco star-glow-2">☆</div>
+    <div class="anime-deco sparkle-row">✦ ✧ ✦ ✧ ✦</div>
+    <div class="anime-deco manga-corner manga-corner-tl"></div>
+    <div class="anime-deco manga-corner manga-corner-br"></div>
+  </div>
+
+  <!-- ==========================================
+       WELCOME PORTAL (Landing Experience)
+       ========================================== -->
+  <div class="welcome-portal" id="welcome-portal">
+    <div class="welcome-glow-orb"></div>
+    <div class="welcome-content">
+      <div class="welcome-header">
+        <h1 class="welcome-logo">NailEdit<span>.frr</span></h1>
+        <p class="welcome-tagline">"Your Nails. Your Aesthetic. Your Story. ✨"</p>
+      </div>
+      
+      <div class="welcome-prompt">
+        <h2>Choose Your Nail Universe</h2>
+        <p>What kind of nails match your personality?</p>
+      </div>
+      
+      <!-- Universe Selection Cards -->
+      <div class="universe-cards">
+        
+        <!-- Card 1: Traditional Indian -->
+        <div class="universe-card card-indian" data-universe="indian">
+          <div class="card-image-wrapper">
+            <img src="assets/indian_nails.png" alt="Bridal Indian Nail Art">
+            <div class="card-sparkles">🪔✨🌺</div>
+          </div>
+          <div class="card-info">
+            <span class="card-emoji">🌸</span>
+            <h3>Traditional Indian</h3>
+            <p>Bridal maroon, royal mandalas & rich gold foil</p>
+          </div>
+        </div>
+        
+        <!-- Card 2: Kawaii / Cutesy -->
+        <div class="universe-card card-kawaii" data-universe="kawaii">
+          <div class="card-image-wrapper">
+            <img src="assets/kawaii_nails.png" alt="Barbie Kawaii Nails">
+            <div class="card-sparkles">🎀🐰🍭</div>
+          </div>
+          <div class="card-info">
+            <span class="card-emoji">🎀</span>
+            <h3>Kawaii / Cutesy</h3>
+            <p>Barbie pinks, 3D resin bows & cute teddy stars</p>
+          </div>
+        </div>
+        
+        <!-- Card 3: Anime -->
+        <div class="universe-card card-anime" data-universe="anime">
+          <div class="card-image-wrapper">
+            <img src="assets/anime_nails.png" alt="Magical Girl Anime Nails">
+            <div class="card-sparkles">🌙🌸🐱</div>
+          </div>
+          <div class="card-info">
+            <span class="card-emoji">🌙</span>
+            <h3>Anime Universe</h3>
+            <p>Magical girl sakura, shonen energy & Ghibli dreamscapes</p>
+          </div>
+        </div>
+        
+        <!-- Card 4: Custom -->
+        <div class="universe-card card-custom" data-universe="custom">
+          <div class="card-image-wrapper">
+            <img src="assets/custom_nails.png" alt="Minimalist Custom Nails">
+            <div class="card-sparkles">🎨💎💅</div>
+          </div>
+          <div class="card-info">
+            <span class="card-emoji">✨</span>
+            <h3>Custom Universe</h3>
+            <p>Your own Pinterest inspo, colors & unique details</p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Quiz Entry Point -->
+      <div class="quiz-invitation">
+        <p>Unsure which aesthetic suits you?</p>
+        <button class="btn btn-secondary" id="start-quiz-btn">
+          <i data-lucide="sparkles"></i> Take the Personality Quiz
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        NailEdit<span>.frr</span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#ai-recommender" class="nav-link">AI Suggestion</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#booking" class="nav-link nav-booking-link">Book Now</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <!-- Floating Theme Selector -->
+        <button class="btn-universe-switch" id="universe-switch-btn" title="Change Nail Universe">
+          <i data-lucide="wand-2"></i>
+          <span class="nav-theme-indicator">Aesthetic: <strong id="current-theme-name">Default</strong></span>
+        </button>
+        
+        <!-- Instagram Link -->
+        <a href="https://www.instagram.com/nailedit.frr/" target="_blank" class="btn-wishlist-toggle" title="Follow us on Instagram">
+          <i data-lucide="instagram"></i>
+        </a>
+        
+        <!-- Wishlist Button -->
+        <button class="btn-wishlist-toggle" id="wishlist-toggle-btn" title="View Wishlist">
+          <i data-lucide="heart"></i>
+          <span class="wishlist-count" id="wishlist-badge">0</span>
+        </button>
+        
+        <a href="#booking" class="btn btn-primary nav-cta">Book Set</a>
+      </div>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+        <span class="nav-toggle-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION (DYNAMIC CONTENT)
+       ========================================== -->
+  <section class="hero" id="hero">
+    <!-- Immersive Anime Hero Fullscreen (Only active in theme-anime) -->
+    <div class="anime-hero-fullscreen">
+      <!-- Glow Orbs & Soft Light Rays -->
+      <div class="anime-hero-glow anime-hero-glow-pink"></div>
+      <div class="anime-hero-glow anime-hero-glow-lavender"></div>
+      <div class="anime-hero-light-rays"></div>
+      
+      <!-- Floating Petals & Sparkles -->
+      <div class="anime-hero-particles">
+        <div class="hero-sakura sakura-1">🌸</div>
+        <div class="hero-sakura sakura-2">🌸</div>
+        <div class="hero-sakura sakura-3">✿</div>
+        <div class="hero-sakura sakura-4">🌸</div>
+        <div class="hero-sparkle sparkle-1">✦</div>
+        <div class="hero-sparkle sparkle-2">✧</div>
+        <div class="hero-sparkle sparkle-3">✦</div>
+        <div class="hero-sparkle sparkle-4">✧</div>
+      </div>
+
+      <div class="anime-hero-char-left-special">
+        <img src="assets/anime_char_cyberpunk_girl.png" alt="Anime Character Left" class="left-char-breathe">
+      </div>
+      
+      <div class="anime-hero-content-special">
+        <div class="anime-hero-title-wrapper-special">
+          <span class="anime-title-emoji-special">🌸</span>
+          <h1 class="anime-hero-main-title-special">ANIME NAIL ART</h1>
+        </div>
+        <p class="anime-hero-sub-title-special">Step into a magical world of anime-inspired nail designs crafted for true anime lovers.</p>
+        
+        <div class="anime-hero-pills-special">
+          <span>Kawaii</span>
+          <span>Magical Girl</span>
+          <span>Fantasy</span>
+          <span>Dark Anime</span>
+          <span>Romance</span>
+        </div>
+        
+        <div class="anime-hero-buttons-special">
+          <a href="#collections" class="btn btn-primary anime-explore-btn-special">Explore Designs</a>
+          <button type="button" class="btn btn-secondary anime-book-btn-special">Book Your Anime Set</button>
+        </div>
+      </div>
+      
+      <div class="anime-hero-char-right-special">
+        <img src="assets/anime_char_pink.png" alt="Anime Character Right" class="right-char-breathe">
+      </div>
+    </div>
+
+    <div class="container hero-wrapper">
+      <div class="hero-content">
+        <!-- Dynamic Header tags based on theme -->
+        <div class="theme-text-container" id="hero-text-indian">
+          <span class="hero-subtitle">Celebrate Indian Beauty ✨</span>
+          <h2 class="hero-title font-indian">Artful Nails & Bridal Luxury</h2>
+          <p class="hero-desc">Bespoke nail art crafted for festive, bridal, and royal occasions. Experience rich gold leaf accents, intricate mandala details, and elegant henna-inspired sets.</p>
+        </div>
+        
+        <div class="theme-text-container" id="hero-text-kawaii">
+          <span class="hero-subtitle">Cuteness Starts At Your Fingertips 🎀</span>
+          <h2 class="hero-title font-kawaii">Dreamy Pastel Kawaii Sets</h2>
+          <p class="hero-desc">Fluffy teddy bears, glossy pink strawberry patterns, and custom 3D resin bows. Indulge in the sweetest Korean-style gel extensions designed to wow.</p>
+        </div>
+        
+        <div class="theme-text-container" id="hero-text-anime">
+          <span class="hero-subtitle anime-hero-tag">✦ Sakura Twilight Studio ✦</span>
+          <h2 class="hero-title font-anime anime-hero-title">Your Fandom,<br>On Your Fingertips</h2>
+          <p class="hero-desc">Hand-painted magical girl moons, shonen energy gradients, and Ghibli dreamscapes — each set crafted like a mini anime panel, glowing with sakura pink and twilight lavender.</p>
+        </div>
+        
+        <div class="theme-text-container" id="hero-text-custom">
+          <span class="hero-subtitle">Your Idea. Your Design. Your Nails. ✨</span>
+          <h2 class="hero-title font-custom">The Bespoke Nail Studio</h2>
+          <p class="hero-desc">Upload your Pinterest inspiration boards or scribble your ideas. We collaborate to create your exclusive nail universe from scratch.</p>
+        </div>
+        
+        <div class="theme-text-container active" id="hero-text-default">
+          <span class="hero-subtitle">Welcome to NailEdit.frr</span>
+          <h2 class="hero-title">Your Nails.<br>Your Aesthetic.</h2>
+          <p class="hero-desc">Enter a magical nail studio built around your favorite vibes. Choose an aesthetic theme above to unlock customized collections, custom music notes, and galleries.</p>
+        </div>
+        
+        <div class="hero-buttons">
+          <a href="#collections" class="btn btn-primary">Explore Collections ✦</a>
+          <a href="#gallery" class="btn btn-secondary">Inspiration Gallery</a>
+          <a href="https://www.instagram.com/nailedit.frr/" target="_blank" class="btn btn-secondary">
+            <i data-lucide="instagram" style="margin-right: 0.5rem; width: 16px; height: 16px; vertical-align: middle;"></i> Instagram
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hero-card-container">
+          <!-- Dynamic Hero Image that switches based on active theme -->
+          <img src="assets/hero_nails.png" alt="Aesthetic Nail Extensions" class="hero-img active" id="hero-img-default">
+          <img src="assets/indian_nails.png" alt="Traditional Indian Nails" class="hero-img" id="hero-img-indian">
+          <img src="assets/kawaii_nails.png" alt="Kawaii Cutesy Nails" class="hero-img" id="hero-img-kawaii">
+          <img src="assets/anime_nails.png" alt="Anime Art Nails" class="hero-img" id="hero-img-anime">
+          <img src="assets/custom_nails.png" alt="Custom Nails" class="hero-img" id="hero-img-custom">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       DYNAMIC COLLECTIONS SECTION & CUSTOM CREATOR
+       ========================================== -->
+  <section class="collections section-padding" id="collections">
+    <div class="container">
+      
+      <!-- Anime Collections -->
+      <div class="theme-section-wrapper" id="collections-anime">
+        
+        <!-- Continuous background layers specific to Anime section -->
+        <div class="anime-section-bg-wrapper">
+          <div class="anime-section-aurora aurora-purple"></div>
+          <div class="anime-section-aurora aurora-pink"></div>
+          <div class="anime-section-aurora aurora-blue"></div>
+          <div class="anime-section-particles"></div>
+        </div>
+
+        <!-- Elegant Title Area -->
+        <div class="anime-coll-title-area">
+          <div class="anime-coll-label-container">
+            <span class="anime-coll-label">✦ OUR COLLECTIONS ✦</span>
+          </div>
+          <h2 class="anime-coll-heading">
+            <span class="sakura-ornament">🌸</span> Explore Anime Worlds <span class="sakura-ornament">🌸</span>
+          </h2>
+          <p class="anime-coll-subheading">Choose your favorite anime vibe and let your nails tell a magical story.</p>
+          <div class="anime-coll-ornament">✦ ✧ ✦</div>
+        </div>
+
+        <!-- Clean Responsive Grid (10 categories) -->
+        <div class="anime-coll-grid">
+          
+          <!-- Card 1: Magical Girl -->
+          <div class="anime-coll-card magical-girl" data-category="Magical Girl">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_sailormoon.png" alt="Magical Girl" class="card-char-img">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">🌙</span>
+                <h4>Magical Girl</h4>
+              </div>
+              <p class="card-desc">Sparkle like a hero</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Kawaii -->
+          <div class="anime-coll-card kawaii" data-category="Kawaii">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_pink.png" alt="Kawaii" class="card-char-img">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">🐰</span>
+                <h4>Kawaii</h4>
+              </div>
+              <p class="card-desc">Cute, sweet & adorable</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Dark Anime -->
+          <div class="anime-coll-card dark-anime" data-category="Dark Anime">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_nezuko.png" alt="Dark Anime" class="card-char-img">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">🌹</span>
+                <h4>Dark Anime</h4>
+              </div>
+              <p class="card-desc">Embrace the dark elegance</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Fantasy -->
+          <div class="anime-coll-card fantasy" data-category="Fantasy">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_sailormoon.png" alt="Fantasy" class="card-char-img hue-shifted-blue">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">🦋</span>
+                <h4>Fantasy</h4>
+              </div>
+              <p class="card-desc">Enter a world of magic</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Shonen -->
+          <div class="anime-coll-card shonen" data-category="Shonen">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_luffy.png" alt="Shonen" class="card-char-img">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">🔥</span>
+                <h4>Shonen</h4>
+              </div>
+              <p class="card-desc">Power, courage & action</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Romance -->
+          <div class="anime-coll-card romance" data-category="Romance">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_pink.png" alt="Romance" class="card-char-img hue-shifted-rose">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">💖</span>
+                <h4>Romance</h4>
+              </div>
+              <p class="card-desc">Soft, dreamy & beautiful</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Tokyo Vibes -->
+          <div class="anime-coll-card tokyo-vibes" data-category="Tokyo Vibes">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_gojo.png" alt="Tokyo Vibes" class="card-char-img">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">⭐</span>
+                <h4>Tokyo Vibes</h4>
+              </div>
+              <p class="card-desc">Urban, trendy & stylish</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: Summer Vibes -->
+          <div class="anime-coll-card summer-vibes" data-category="Summer Vibes">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_pink.png" alt="Summer Vibes" class="card-char-img hue-shifted-orange">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">🐚</span>
+                <h4>Summer Vibes</h4>
+              </div>
+              <p class="card-desc">Bright, fun & refreshing</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: Japanese Aesthetic -->
+          <div class="anime-coll-card japanese-aesthetic" data-category="Japanese Aesthetic">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_nezuko.png" alt="Japanese Aesthetic" class="card-char-img detailed-nezuko-pos">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">⛩️</span>
+                <h4>Japanese Aesthetic</h4>
+              </div>
+              <p class="card-desc">Timeless, classy & elegant</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10: Cyber Anime -->
+          <div class="anime-coll-card cyber-anime" data-category="Cyber Anime">
+            <div class="card-glow-border"></div>
+            <div class="card-char-wrapper">
+              <img src="assets/anime_char_cyberpunk_girl.png" alt="Cyber Anime" class="card-char-img">
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <span class="card-emoji-icon">🪐</span>
+                <h4>Cyber Anime</h4>
+              </div>
+              <p class="card-desc">Futuristic & edgy vibes</p>
+              <div class="card-nail-strip">
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+                <span class="nail-tip"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom CTA Panel -->
+        <div class="anime-coll-cta-panel-wrapper">
+          <div class="anime-coll-cta-panel">
+            <div class="cta-left">
+              <span class="cta-sparkle">✦</span>
+              <div class="cta-text">
+                <h3>Can't Decide?</h3>
+                <p>Let AI recommend the perfect anime nail set for you.</p>
+              </div>
+              <span class="cta-sparkle">✦</span>
+            </div>
+            <div class="cta-right">
+              <button type="button" class="btn anime-ai-suggest-btn" id="anime-ai-suggest-btn">Get AI Suggestion ✨</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Traditional Indian Collections -->
+      <div class="theme-section-wrapper" id="collections-indian">
+        <div class="section-header">
+          <span class="section-subtitle-hand">Royal Heritage</span>
+          <h2 class="section-title font-indian">Traditional Indian Collections</h2>
+        </div>
+        <div class="collections-grid">
+          <div class="collection-card">
+            <div class="coll-badge">Royal</div>
+            <h3>👰 Bridal Luxury</h3>
+            <p>Royal red bases layered with intricate gold mandalas, dangling pearl chains, and gems.</p>
+            <span class="coll-meta">Care: High | Price: ₹1,999+</span>
+          </div>
+          <div class="collection-card">
+            <h3>🌺 Mehndi Harmony</h3>
+            <p>Henna pattern details over nude bases, matching hand ornaments beautifully.</p>
+            <span class="coll-meta">Care: Moderate | Price: ₹1,699+</span>
+          </div>
+          <div class="collection-card">
+            <h3>🪔 Festival Glow</h3>
+            <p>Emerald green bases with mirror foil and shimmering gold leaf outlines.</p>
+            <span class="coll-meta">Care: Easy | Price: ₹1,399+</span>
+          </div>
+          <div class="collection-card">
+            <h3>🦚 Royal Maharani</h3>
+            <p>Majestic peacock motifs in gold, teal, and navy velvet chrome finishes.</p>
+            <span class="coll-meta">Care: High | Price: ₹1,799+</span>
+          </div>
+          <div class="collection-card">
+            <h3>💍 Roka & Engagement</h3>
+            <p>Glazed champagne glitter tips and delicate white floral relief work.</p>
+            <span class="coll-meta">Care: Moderate | Price: ₹1,599+</span>
+          </div>
+          <div class="collection-card">
+            <h3>💃 Punjabi Phulkari</h3>
+            <p>Multi-color folk pattern stitches and shiny rhinestone accents.</p>
+            <span class="coll-meta">Care: Easy | Price: ₹1,499+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kawaii Collections -->
+      <div class="theme-section-wrapper" id="collections-kawaii">
+        <div class="section-header">
+          <span class="section-subtitle-hand">Cuteness Vault</span>
+          <h2 class="section-title font-kawaii">Kawaii Nail Collections</h2>
+        </div>
+        <div class="collections-grid">
+          <div class="collection-card">
+            <div class="coll-badge">Cute</div>
+            <h3>🧸 Teddy Sweetheart</h3>
+            <p>Brown jelly gel bases with 3D miniature teddy bears, hearts, and checkered accents.</p>
+            <span class="coll-meta">Maintenance: Normal | Price: ₹1,599+</span>
+          </div>
+          <div class="collection-card">
+            <h3>🎀 Barbie Dreamhouse</h3>
+            <p>Hot pink glitter, iconic high-gloss pink swirls, and tiny logo heart charms.</p>
+            <span class="coll-meta">Maintenance: Normal | Price: ₹1,799+</span>
+          </div>
+          <div class="collection-card">
+            <h3>🍓 Strawberry Picnic</h3>
+            <p>Hand-painted strawberry patches, picnic picnic gingham, and white flower gems.</p>
+            <span class="coll-meta">Maintenance: Easy | Price: ₹1,499+</span>
+          </div>
+          <div class="collection-card">
+            <h3>☁️ Soft Girl Aura</h3>
+            <p>Dreamy pastel aura airbrushing, dainty white cloud shapes, and holographic stars.</p>
+            <span class="coll-meta">Maintenance: Easy | Price: ₹1,299+</span>
+          </div>
+          <div class="collection-card">
+            <h3>🩷 Princess Tiara</h3>
+            <p>Sheer pink nails with pearl clusters, silver tiara charms, and micro-crystals.</p>
+            <span class="coll-meta">Maintenance: High | Price: ₹1,999+</span>
+          </div>
+          <div class="collection-card">
+            <h3>🍭 Sweet Candy</h3>
+            <p>Pastel lollipop stripes, glossy gummy bear charms, and sugar glitter dust.</p>
+            <span class="coll-meta">Maintenance: Normal | Price: ₹1,699+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Nails Builder (Only shown in Custom Universe or selected) -->
+      <div class="theme-section-wrapper" id="collections-custom">
+        <div class="section-header">
+          <span class="section-subtitle-hand">Design Canvas</span>
+          <h2 class="section-title font-custom">Interactive Custom Nail Creator</h2>
+        </div>
+        
+        <div class="custom-builder-container">
+          <!-- Live Preview Side -->
+          <div class="builder-preview">
+            <h3>Your Design Preview</h3>
+            <div class="nail-hand-preview">
+              <div class="nail-finger" id="finger-preview">
+                <div class="nail-plate" id="nail-shape-plate">
+                  <div class="nail-art-overlay" id="nail-color-plate"></div>
+                  <div class="nail-sparkle-overlay">✦</div>
+                </div>
+              </div>
+            </div>
+            <div class="preview-specifications">
+              <p>Shape: <strong id="spec-shape">Almond</strong></p>
+              <p>Length: <strong id="spec-length">Medium</strong></p>
+              <p>Color: <span class="spec-color-dot" id="spec-color-dot"></span> <strong id="spec-color-name">Pastel Pink</strong></p>
+            </div>
+          </div>
+          
+          <!-- Custom Options Inputs -->
+          <div class="builder-controls">
+            <!-- 1. Shape Selection -->
+            <div class="builder-group">
+              <label class="builder-label">1. Choose Nail Shape</label>
+              <div class="shape-selectors">
+                <button class="shape-btn active" data-shape="almond">Almond</button>
+                <button class="shape-btn" data-shape="coffin">Coffin</button>
+                <button class="shape-btn" data-shape="square">Square</button>
+                <button class="shape-btn" data-shape="stiletto">Stiletto</button>
+                <button class="shape-btn" data-shape="round">Round</button>
+              </div>
+            </div>
+
+            <!-- 2. Length Picker -->
+            <div class="builder-group">
+              <label class="builder-label">2. Select Length</label>
+              <div class="length-selectors">
+                <button class="length-btn" data-length="short">Short</button>
+                <button class="length-btn active" data-length="medium">Medium</button>
+                <button class="length-btn" data-length="long">Long</button>
+                <button class="length-btn" data-length="xl">XL Extra Long</button>
+              </div>
+            </div>
+
+            <!-- 3. Base Color Swatches -->
+            <div class="builder-group">
+              <label class="builder-label">3. Select Base Color</label>
+              <div class="color-swatches">
+                <button class="swatch-btn active" data-color="#FFD1DC" data-name="Baby Pink" style="background-color: #FFD1DC;"></button>
+                <button class="swatch-btn" data-color="#E2DDFE" data-name="Anime Lilac" style="background-color: #E2DDFE;"></button>
+                <button class="swatch-btn" data-color="#8A1523" data-name="Bridal Red" style="background-color: #8A1523;"></button>
+                <button class="swatch-btn" data-color="#0F2017" data-name="Emerald Forest" style="background-color: #0F2017;"></button>
+                <button class="swatch-btn" data-color="#D4AF37" data-name="Royal Gold" style="background-color: #D4AF37;"></button>
+                <button class="swatch-btn" data-color="#FFFFFF" data-name="Clean White" style="background-color: #FFFFFF;"></button>
+                <button class="swatch-btn" data-color="#111111" data-name="Cyber Noir" style="background-color: #111111;"></button>
+              </div>
+            </div>
+
+            <!-- 4. Notes & Inspiration Upload -->
+            <div class="builder-group">
+              <label class="builder-label">4. Detail Your Inspo</label>
+              <textarea id="custom-inspo-text" class="form-input" rows="3" placeholder="Paste Pinterest link or write details e.g., 'gummy bears on thumbs, silver chrome chrome lines on others'"></textarea>
+            </div>
+            
+            <div class="builder-group">
+              <label class="builder-label" for="custom-file-upload">5. Upload Inspo Screenshot</label>
+              <div class="file-uploader-box">
+                <i data-lucide="upload-cloud"></i>
+                <span>Click to upload photo</span>
+                <input type="file" id="custom-file-upload" accept="image/*" class="file-hidden-input">
+              </div>
+              <div class="upload-preview-container" id="upload-preview-box">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="apply-custom-to-form">
+              Apply Design to Booking Form ✦
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fallback Default collections section -->
+      <div id="collections-default" class="theme-section-wrapper">
+        <div class="section-header text-center" style="max-width: 600px; margin: 0 auto 3rem auto;">
+          <h3>Aesthetic Collections</h3>
+          <p>Please select your preferred Nail Universe above or take the quiz to explore categorized sets including Bridal Red, 3D Bows, and Handpainted Anime Art.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       AI NAIL RECOMMENDATION ENGINE
+       ========================================== -->
+  <section class="ai-recommender section-padding" id="ai-recommender">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle-hand">Nail Matchmaker</span>
+        <h2 class="section-title">AI Nail Recommender</h2>
+      </div>
+      
+      <div class="recommender-card">
+        <div class="recommender-inputs">
+          <h3>Find Your Match</h3>
+          <p>Answer these two questions, and our aesthetic engine will recommend the perfect nail extensions for you!</p>
+          
+          <div class="rec-group">
+            <label class="builder-label">What's your Outfit Vibe today?</label>
+            <div class="rec-options" id="rec-outfit">
+              <button class="rec-btn active" data-value="traditional">Traditional Wear</button>
+              <button class="rec-btn" data-value="cozy">Cute & Cozy</button>
+              <button class="rec-btn" data-value="cyber">Gothic / Cyberpunk</button>
+              <button class="rec-btn" data-value="glam">Luxury Glam</button>
+            </div>
+          </div>
+          
+          <div class="rec-group">
+            <label class="builder-label">What's your current Mood?</label>
+            <div class="rec-options" id="rec-mood">
+              <button class="rec-btn active" data-value="chill">Chill & Sweet</button>
+              <button class="rec-btn" data-value="romantic">Romantic</button>
+              <button class="rec-btn" data-value="energetic">Expressive / Bold</button>
+              <button class="rec-btn" data-value="mysterious">Mysterious</button>
+            </div>
+          </div>
+          
+          <button class="btn btn-primary" id="run-ai-rec-btn">
+            Get Recommendation ✧
+          </button>
+        </div>
+        
+        <!-- Result Box -->
+        <div class="recommender-result" id="recommender-result-box">
+          <div class="rec-result-empty">
+            <i data-lucide="sparkles" class="spinning-sparkle"></i>
+            <p>Aesthetic analysis waiting...</p>
+          </div>
+          <div class="rec-result-content" style="display: none;">
+            <div class="rec-badge" id="rec-result-universe">Kawaii Universe</div>
+            <h4 id="rec-result-title">Teddy Sweetheart Nails</h4>
+            <p id="rec-result-desc">A dreamy blend of brown jelly base and 3D miniature teddy bears, ideal for cozy sweet dates.</p>
+            <div class="rec-result-spec">
+              <span>Length: <strong>Medium</strong></span>
+              <span>Shape: <strong>Almond</strong></span>
+            </div>
+            <button class="btn btn-secondary" id="apply-rec-to-booking">Book This Recommended Set</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SMART GALLERY SYSTEM (PINTEREST MASONRY & LIGHTBOX)
+       ========================================= -->
+  <section class="gallery section-padding" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle-hand">Inspiration Gallery</span>
+        <h2 class="section-title">Explore Your Universe</h2>
+      </div>
+      
+      <!-- Smart Filter Banner (Locked to Universe selections) -->
+      <div class="gallery-category-notice" id="gallery-notice">
+        Showing designs from the <strong id="gallery-active-universe-name">Default</strong> aesthetic. 
+        <button id="gallery-reset-theme-btn">Change Universe Theme</button>
+      </div>
+      
+      <!-- Pinterest Masonry Layout Grid -->
+      <div class="gallery-masonry" id="gallery-grid">
+        
+        <!-- Anime Items -->
+        <div class="gallery-card-masonry" data-universe="anime">
+          <img src="assets/anime_nails.png" alt="Magical Girl Pink & Blue Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="anime-1"><i data-lucide="heart"></i></button>
+            <h4>Magical Girl Stars</h4>
+            <span>Anime Universe</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="anime">
+          <img src="assets/anime_2.jpg" alt="Ocean Mermaid Ripple Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="anime-2"><i data-lucide="heart"></i></button>
+            <h4>Ocean Mermaid Ripple</h4>
+            <span>Anime Universe</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="anime">
+          <img src="assets/anime_3.png" alt="Sailor Moon Sparkle Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="anime-3"><i data-lucide="heart"></i></button>
+            <h4>Sailor Moon Sparkle</h4>
+            <span>Anime Universe</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="anime">
+          <img src="assets/anime_4.png" alt="Dark Shonen Matte Gradient Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="anime-4"><i data-lucide="heart"></i></button>
+            <h4>Dark Shonen Matte</h4>
+            <span>Anime Universe</span>
+          </div>
+        </div>
+
+        <!-- Traditional Indian Items -->
+        <div class="gallery-card-masonry" data-universe="indian">
+          <img src="assets/indian_nails.png" alt="Royal Maharani Maroon & Gold Bridal Extensions">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="indian-1"><i data-lucide="heart"></i></button>
+            <h4>Bridal Royal Maharani</h4>
+            <span>Traditional Indian</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="indian">
+          <img src="assets/nail_bridal.png" alt="Classic Indian Bridal Pearls">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="indian-2"><i data-lucide="heart"></i></button>
+            <h4>Mehndi Matching Lace</h4>
+            <span>Traditional Indian</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="indian">
+          <img src="assets/nail_indian_mehndi.png" alt="Festival Gold Foil">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="indian-3"><i data-lucide="heart"></i></button>
+            <h4>Mandala Art Gold</h4>
+            <span>Traditional Indian</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="indian">
+          <img src="assets/nail_indian_royal.png" alt="Punjabi Chooda matching red extensions">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="indian-4"><i data-lucide="heart"></i></button>
+            <h4>Sangeet Champagne Gems</h4>
+            <span>Traditional Indian</span>
+          </div>
+        </div>
+
+        <!-- Kawaii Items -->
+        <div class="gallery-card-masonry" data-universe="kawaii">
+          <img src="assets/kawaii_nails.png" alt="Barbie Pink Bows Extensions">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="kawaii-1"><i data-lucide="heart"></i></button>
+            <h4>Barbie 3D Resin Bows</h4>
+            <span>Kawaii / Cutesy</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="kawaii">
+          <img src="assets/kawaii_2.jpg" alt="Fresh Summer Fruit Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="kawaii-2"><i data-lucide="heart"></i></button>
+            <h4>Fresh Summer Fruit</h4>
+            <span>Kawaii / Cutesy</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="kawaii">
+          <img src="assets/kawaii_3.png" alt="Pastel Ribbons and Glitter Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="kawaii-3"><i data-lucide="heart"></i></button>
+            <h4>Pastel Ribbons & Glitter</h4>
+            <span>Kawaii / Cutesy</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="kawaii">
+          <img src="assets/kawaii_4.png" alt="Barbie Gummy Bear Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="kawaii-4"><i data-lucide="heart"></i></button>
+            <h4>Barbie Gummy Bear</h4>
+            <span>Kawaii / Cutesy</span>
+          </div>
+        </div>
+
+        <!-- Custom Inspiration Items -->
+        <div class="gallery-card-masonry" data-universe="custom">
+          <img src="assets/custom_nails.png" alt="Minimalist Silver Chrome lines">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="custom-1"><i data-lucide="heart"></i></button>
+            <h4>Silver Chrome abstract</h4>
+            <span>Custom Universe</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="custom">
+          <img src="assets/custom_2.jpg" alt="Gold Celestial Stars Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="custom-2"><i data-lucide="heart"></i></button>
+            <h4>Gold Celestial Stars</h4>
+            <span>Custom Universe</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="custom">
+          <img src="assets/custom_3.jpg" alt="Sage Green Pearls Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="custom-3"><i data-lucide="heart"></i></button>
+            <h4>Sage Green Pearls</h4>
+            <span>Custom Universe</span>
+          </div>
+        </div>
+        <div class="gallery-card-masonry" data-universe="custom">
+          <img src="assets/custom_4.jpg" alt="Retro Swirl French Tips Design">
+          <div class="gallery-card-overlay">
+            <button class="btn-like-gallery" data-id="custom-4"><i data-lucide="heart"></i></button>
+            <h4>Retro Swirl French Tips</h4>
+            <span>Custom Universe</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SPECIAL OFFERS (ADMIN-CONTROLLED)
+       ========================================== -->
+  <section class="special-offers section-padding" id="special-offers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle-hand">Bestie Deals</span>
+        <h2 class="section-title">Special Offers Just For You 🎁</h2>
+      </div>
+      
+      <!-- Dynamic Offers Container -->
+      <div class="offers-grid" id="offers-list">
+        <!-- Injected dynamically based on Admin Active settings -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       AUTHENTIC REVIEWS & BEFORE/AFTER SNAPSHOTS
+       ========================================== -->
+  <section class="testimonials section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle-hand">Girlies Love Us</span>
+        <h2 class="section-title">Reviews from NailEdit Besties 💖</h2>
+      </div>
+      
+      <div class="testimonials-side-by-side">
+        <!-- Left Column: Reviews -->
+        <div class="reviews-column">
+          <div class="reviews-slider-container">
+            <!-- Review Carousel -->
+            <div class="reviews-slider" id="review-slider">
+              <div class="review-slide">
+                <div class="review-card">
+                  <div class="review-meta-row">
+                    <strong class="review-name">Sneha Sharma</strong>
+                    <span class="review-date">June 10, 2026</span>
+                  </div>
+                  <div class="rating-stars"><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i></div>
+                  <p class="review-text">"Got my bridal extensions done here. The maroon mandalas with gold leaf matches my wedding lehenga perfectly! Everyone at the wedding could not stop asking about my nails. 100/10!"</p>
+                  <div class="review-service">Service: <strong>Bridal Luxury (Traditional Indian Universe)</strong></div>
+                </div>
+              </div>
+              
+              <div class="review-slide">
+                <div class="review-card">
+                  <div class="review-meta-row">
+                    <strong class="review-name">Simranpreet Kaur</strong>
+                    <span class="review-date">May 28, 2026</span>
+                  </div>
+                  <div class="rating-stars"><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i></div>
+                  <p class="review-text">"I am obsessed with my 3D teddy nails! The studio smelled like fresh strawberries, lo-fi music was playing, and they even served iced coffees. Cutest salon in Ludhiana! 🧸☕"</p>
+                  <div class="review-service">Service: <strong>Teddy Sweetheart (Kawaii Universe)</strong></div>
+                </div>
+              </div>
+
+              <div class="review-slide">
+                <div class="review-card">
+                  <div class="review-meta-row">
+                    <strong class="review-name">Riya Verma</strong>
+                    <span class="review-date">May 15, 2026</span>
+                  </div>
+                  <div class="rating-stars"><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i><i data-lucide="star" class="fill"></i></div>
+                  <p class="review-text">"Handpainted Sailor Moon nails are crazy detailed! Absolute perfectionists. They mapped my character screenshot onto my pointer finger perfectly. Love it!"</p>
+                  <div class="review-service">Service: <strong>Magical Girl (Anime Universe)</strong></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="slider-dots" id="review-dots">
+              <!-- Injected via JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Instagram DMs -->
+        <div class="dms-column">
+          <!-- Instagram reviews screenshot banner -->
+          <div class="insta-review-banner">
+            <h3>✨ Spotted on Instagram Story DMs ✨</h3>
+            <div class="insta-dm-grid">
+              <div class="insta-dm-card">
+                <div class="insta-dm-user">@khushi.dhillon</div>
+                <p>"omg literally screaming, look at the sparkles on these!! you nailed it bestie 😭😭💖"</p>
+              </div>
+              <div class="insta-dm-card">
+                <div class="insta-dm-user">@harleen_k</div>
+                <p>"My nails lasted for 4 weeks straight without a single chip, you are a magician!"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WISHLIST DRAWER (SIDE BAR PANEL)
+       ========================================== -->
+  <div class="wishlist-drawer" id="wishlist-drawer">
+    <div class="wishlist-header">
+      <h3>Saved Universe Designs</h3>
+      <button class="wishlist-close" id="wishlist-close-btn">&times;</button>
+    </div>
+    <div class="wishlist-content" id="wishlist-items-container">
+      <!-- Injected via JS -->
+      <p class="wishlist-empty">Your wishlist is empty. Tap the 💖 on gallery cards to save inspiration designs!</p>
+    </div>
+    <div class="wishlist-footer" style="display: none;" id="wishlist-footer">
+      <button class="btn btn-primary" id="book-wishlist-designs">Apply Wishlist to Booking</button>
+    </div>
+  </div>
+  <div class="wishlist-overlay" id="wishlist-drawer-overlay"></div>
+
+  <!-- ==========================================
+       PERSONALITY QUIZ MODAL
+       ========================================== -->
+  <div class="quiz-modal" id="quiz-modal">
+    <div class="quiz-modal-card">
+      <button class="quiz-close-btn" id="quiz-close-btn">&times;</button>
+      
+      <!-- Introduction state -->
+      <div id="quiz-state-intro">
+        <span class="quiz-mini-badge">Nail Matchmaker</span>
+        <h3>Discover Your Nail Universe</h3>
+        <p>Answer 6 quick questions about your style, outfit preferences, and personality, and we will reveal your matching nail aesthetic universe! ✨</p>
+        <button class="btn btn-primary" id="quiz-start-real-btn">Start Quiz ✦</button>
+      </div>
+
+      <!-- Question states (rendered dynamically in JS) -->
+      <div id="quiz-state-question" style="display: none;">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+        </div>
+        <span class="question-number" id="quiz-q-num">Question 1 of 6</span>
+        <h4 class="question-text" id="quiz-q-text">What's your dream weekend plans?</h4>
+        <div class="quiz-options-list" id="quiz-options-container">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Result state -->
+      <div id="quiz-state-result" style="display: none;">
+        <div class="quiz-result-header">
+          <i data-lucide="sparkles" class="success-star"></i>
+          <h3>We Found Your Perfect Nail Universe!</h3>
+        </div>
+        
+        <div class="quiz-universe-result-box" id="quiz-result-display">
+          <!-- Injected via JS e.g., "Kawaii Universe" -->
+        </div>
+        
+        <button class="btn btn-primary" id="quiz-apply-theme-btn">
+          💅 Explore My Nail Universe
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       BOOKING RECEIPT MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="booking-modal-overlay">
+    <div class="modal-card">
+      <div class="modal-icon"><i data-lucide="check"></i></div>
+      <h3 class="modal-title">Yay! Your Nail Journey Begins 💖</h3>
+      <p class="modal-desc">Your transformation request has been styled and draft created. Secure your date & time by clicking below to send this directly to us via WhatsApp.</p>
+      
+      <div class="modal-details" id="booking-receipt-details">
+        <!-- Injected via JS -->
+      </div>
+      
+      <div class="modal-actions">
+        <a href="#" id="modal-send-wa" target="_blank" class="btn btn-primary whatsapp-btn">
+          <i data-lucide="message-circle" style="margin-right: 0.5rem; width:18px; height:18px;"></i> Send Receipt via WhatsApp
+        </a>
+        <a href="https://www.instagram.com/nailedit.frr/" target="_blank" class="btn btn-secondary" style="background: #FFEBF0; color: #E1306C; border-color: #FFB3C1;">
+          <i data-lucide="instagram" style="margin-right: 0.5rem; width:18px; height:18px;"></i> Instagram
+        </a>
+        <button id="modal-close-btn" class="btn btn-secondary">Go Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       LIGHTBOX VIEWER MODAL
+       ========================================== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close-btn">&times;</button>
+    <div class="lightbox-content">
+      <img src="assets/custom_nails.png" id="lightbox-img" alt="Lightbox Visual View">
+      <h4 id="lightbox-title">Design Preview</h4>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       PREMIUM BOOKING SECTION (DOUBLE BOOKING PREVENTED)
+       ========================================== -->
+  <section class="booking section-padding" id="booking">
+    <div class="container booking-wrapper">
+      
+      <div class="booking-info">
+        <span class="booking-tagline">Begin Your Transformation</span>
+        <h2 class="booking-title">Secure Your Vibe Slot</h2>
+        <p class="booking-desc">Pick your nail universe. Our calendar prevents double-bookings automatically by checking real-time availability slots. Verify your details, submit, and receive your styled booking receipt to send straight to our WhatsApp.</p>
+        
+        <div class="booking-highlights-small">
+          <div class="highlight-item-small">
+            <i data-lucide="shield-check"></i>
+            <span>Fully Sanitized Tools</span>
+          </div>
+          <div class="highlight-item-small">
+            <i data-lucide="coffee"></i>
+            <span>Complimentary Iced Lattes</span>
+          </div>
+          <div class="highlight-item-small">
+            <i data-lucide="check-circle-2"></i>
+            <span>Verified Booking Receipt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Booking Form -->
+      <div class="booking-card">
+        <form id="appointment-form" novalidate>
+          
+          <!-- Full Name -->
+          <div class="form-group">
+            <label class="form-label" for="booking-name">Full Name *</label>
+            <input type="text" id="booking-name" class="form-input" placeholder="Your beautiful name" required>
+          </div>
+
+          <div class="form-group-row">
+            <!-- Phone -->
+            <div class="form-group">
+              <label class="form-label" for="booking-phone">Phone Number (WhatsApp) *</label>
+              <input type="tel" id="booking-phone" class="form-input" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+            <!-- Insta -->
+            <div class="form-group">
+              <label class="form-label" for="booking-insta">Instagram Username</label>
+              <input type="text" id="booking-insta" class="form-input" placeholder="@your.aesthetic">
+            </div>
+          </div>
+
+          <div class="form-group-row">
+            <!-- Nail Universe -->
+            <div class="form-group">
+              <label class="form-label" for="booking-universe">Nail Universe *</label>
+              <select id="booking-universe" class="form-input" required>
+                <option value="" disabled>Select Aesthetic Universe</option>
+                <option value="Traditional Indian">Traditional Indian</option>
+                <option value="Kawaii / Cutesy">Kawaii / Cutesy</option>
+                <option value="Anime Universe">Anime Universe</option>
+                <option value="Custom Design">Custom (Your own image/idea)</option>
+              </select>
+            </div>
+            
+            <!-- Date Picker -->
+            <div class="form-group">
+              <label class="form-label" for="booking-date">Preferred Date *</label>
+              <input type="date" id="booking-date" class="form-input" required>
+            </div>
+          </div>
+
+          <div class="form-group-row">
+            <!-- Preferred Time Slots (Checked dynamically) -->
+            <div class="form-group">
+              <label class="form-label" for="booking-time">Preferred Time Slot *</label>
+              <select id="booking-time" class="form-input" required>
+                <option value="" disabled selected>Select Date First</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="05:30 PM">05:30 PM</option>
+              </select>
+              <span class="slot-availability-indicator" id="slot-avail-text"></span>
+            </div>
+            
+            <!-- Shape & Length Selector -->
+            <div class="form-group">
+              <label class="form-label">Nail Length Preview *</label>
+              <div class="visual-length-picker">
+                <label class="radio-length">
+                  <input type="radio" name="nail-length" value="Short" checked>
+                  <span>Short</span>
+                </label>
+                <label class="radio-length">
+                  <input type="radio" name="nail-length" value="Medium">
+                  <span>Med</span>
+                </label>
+                <label class="radio-length">
+                  <input type="radio" name="nail-length" value="Long">
+                  <span>Long</span>
+                </label>
+                <label class="radio-length">
+                  <input type="radio" name="nail-length" value="XL">
+                  <span>XL</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description and custom notes -->
+          <div class="form-group">
+            <label class="form-label" for="booking-notes">Special Requests / Inspiration Details</label>
+            <textarea id="booking-notes" class="form-input" rows="2" placeholder="Describe specific bows, foil accents, colors, or character stickers..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="booking-submit-btn">
+            Book Transformation Set ✦
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT & MAPS SECTION
+       ========================================== -->
+  <section class="contact-section section-padding" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-details text-center">
+          <h2>Visit the Studio 💖</h2>
+          <p class="contact-tagline">Come get your nails done at the coziest nail salon in Ludhiana!</p>
+          
+          <ul class="contact-info-list" style="max-width: 400px; margin: 0 auto 2.5rem auto; list-style: none;">
+            <li style="display: flex; gap: 1.2rem; align-items: flex-start; text-align: left; margin-bottom: 1.5rem;">
+              <i data-lucide="map-pin"></i>
+              <div>
+                <strong>Address</strong>
+                <span>Chimni Road, Ludhiana, Punjab, India</span>
+              </div>
+            </li>
+            <li style="display: flex; gap: 1.2rem; align-items: flex-start; text-align: left;">
+              <i data-lucide="clock"></i>
+              <div>
+                <strong>Studio Hours</strong>
+                <span>Tuesday - Sunday: 10:00 AM - 7:30 PM</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact-social-buttons" style="justify-content: center;">
+            <a href="https://wa.me/919779047374" target="_blank" class="contact-social-btn whatsapp">
+              <i data-lucide="message-circle"></i> WhatsApp Us
+            </a>
+            <a href="https://www.instagram.com/nailedit.frr/" target="_blank" class="contact-social-btn instagram">
+              <i data-lucide="instagram"></i> Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            NailEdit<span>.frr</span>
+          </a>
+          <p class="footer-brand-desc">Indulge in a premium nail extension and styling experience in Ludhiana, Punjab. Every client deserves to show off their gorgeous, customized aesthetic.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Universes</h4>
+          <ul class="footer-links">
+            <li><a href="#collections" class="nav-set-universe" data-universe="indian">Traditional Indian</a></li>
+            <li><a href="#collections" class="nav-set-universe" data-universe="kawaii">Kawaii / Cutesy</a></li>
+            <li><a href="#collections" class="nav-set-universe" data-universe="anime">Anime Art</a></li>
+            <li><a href="#collections" class="nav-set-universe" data-universe="custom">Custom Creator</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Studio Location</h4>
+          <ul class="footer-contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+              <div class="footer-contact-text">
+                Chimni Road, Ludhiana, Punjab, India
+              </div>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <div class="footer-contact-text">
+                Tuesday - Sunday: 10:00 AM - 7:30 PM
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span class="footer-copyright">&copy; 2026 NailEdit.frr. All rights reserved.</span>
+        <span class="footer-love">Made with love for all the aesthetic girlies. 🎀</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
